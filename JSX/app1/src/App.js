@@ -1,6 +1,6 @@
 import React from 'react';
-import RefsClass from './refs-class';
+import RefsArray from './refs-array';
 
 export default function App(){
-  return <RefsClass/>
+  return <RefsArray/>
 }

@@ -33,5 +33,5 @@ export default function Router() {
         -&nbsp;
       </nav>
     </BrowserRouter>
-  )
+  );
 }

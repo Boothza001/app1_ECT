@@ -1,14 +1,8 @@
 import React from 'react'
-import { userContext } from './context'
-import Content2 from './context-content2'
-import Header2 from './content-header2'
+import Router3 from './router3'
+// import Router2 from './router2'
 
-export default function App(){
-  let[user,setUser] = React.useState('')
-  return(
-    <userContext.Provider value={[user,setUser]}>
-      <Header2/>
-      <Content2/>
-    </userContext.Provider>
-  )
+
+export default function App() {
+  return <Router3/>
 }

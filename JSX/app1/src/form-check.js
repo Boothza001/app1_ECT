@@ -3,6 +3,7 @@ import React from "react";
 export default function FormCheck() {
     const switchReq = React.useRef()
     const styles = ['bold','italic','underline']
+    const sizes = ['small','medium','large','larger']
     let checkedStyles = []
     let checkedSize =''
 
@@ -39,7 +40,7 @@ export default function FormCheck() {
     }
 
     return(
-        <div className="mt-4 mx-auto p-3"  tyle={{width:'450px', background:'#cee'}}>
+        <div className="mt-4 mx-auto p-3 rounded"  style={{width:'450px', background:'#cee'}}>
             <form>
                 <span>font style:</span>&nbsp;&nbsp;
                 {
@@ -62,10 +63,23 @@ export default function FormCheck() {
                             <div className="form-check form-check-inline mb-2">
                                 <input type="radio" id={'radio'+i} name="fontSize" value={sz}
                                 className="form-check-input" onChange={onChangeRadio}/>
+                                <label htmlFor={'radio'+i} className="form-check-label">{sz}</label>
                             </div>
                         )
                     })
                 }
+                <div className="form-check form-switch mt-3">
+                    <input type="checkbox" id="sw" value="require"
+                    className="form-check-input" ref={switchReq}/>
+                    <label htmlFor="sw" className="form-check-label">require</label>
+                </div>
+
+                <div className="text-center mt-4">
+                    <button type="button" className="btn btn-sm px-4 btn-primary" onClick={onClickButton}>
+                        OK
+                    </button>
+
+                </div>
             </form>
         </div>
     )
